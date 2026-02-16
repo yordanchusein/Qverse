@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Quantico", system-ui, sans-serif;
+  --font-sans: "Poppins", system-ui, sans-serif;
+  --font-arabic: "Noto Naskh Arabic", system-ui, serif;
+  --hero-bg: url("./assets/hero-bg.jpg");
+  /* Colors */
+  --color-aquamarine: #7fffd4;
+  --color-cataline: #062a78;
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+  .font-arabic {
+    font-family: var(--font-arabic);
+  }
+  .hero-bg {
+    background-image: var(--hero-bg);
+  }
+  .primary {
+    background-color: var(--primary);
+  }
+  .primary-dark {
+    background-color: var(--primary-dark);
+  }
+  .primary-light {
+    background-color: var(--primary-light);
+  }
+  .secondary {
+    background-color: var(--secondary);
+  }
+  .secondary-soft {
+    background-color: var(--secondary-soft);
+  }
+  .accent {
+    background-color: var(--accent);
+  }
+  .accent-soft {
+    background-color: var(--accent-soft);
+  }
+  .text-main {
+    color: var(--text-main);
+  }
+  .text-muted {
+    color: var(--text-muted);
+  }
+}

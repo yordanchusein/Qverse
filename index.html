@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qverse</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Naskh+Arabic:wght@400..700&family=Poppins:ital,wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+  <body class="min-h-screen flex justify-center">
+    <div class="w-full max-w-md bg-white shadow-xl flex flex-col min-h-screen">
+      <!-- Hero Section Start-->
+      <!-- NAVBAR MOBILE -->
+      <nav
+        class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-md z-50 p-4 transition-all duration-300 bg-transparent text-white px-4 py-3 transition-color ease-in-out"
+        id="NavBar"
+      >
+        <div class="flex items-center justify-between">
+          <!-- LEFT: LOGO + TITLE -->
+          <div class="flex items-center gap-2">
+            <!-- Logo (bisa ganti SVG / image) -->
+            <div
+              class="w-8 h-8 bg-white text-cataline flex items-center justify-center rounded font-bold"
+            >
+              <i data-feather="book-open"></i>
+            </div>
+            <span class="font-semibold text-lg">Qverse</span>
+          </div>
+
+          <!-- RIGHT: MENU BUTTON -->
+          <label for="menu-toggle" class="cursor-pointer text-2xl">
+            <i data-feather="menu"></i>
+          </label>
+        </div>
+
+        <!-- HIDDEN CHECKBOX (NO JS) -->
+        <input type="checkbox" id="menu-toggle" class="peer hidden" />
+
+        <!-- MOBILE MENU -->
+        <div
+          class="absolute top-full left-0 w-full z-50 hidden flex-col gap-3 bg-cataline/90 p-4 peer-checked:flex"
+        >
+          <a href="#fitur" class="hover:text-blue-200">Fitur</a>
+          <a href="#qurani" class="hover:text-blue-200">Nilai Qur'ani</a>
+
+          <a
+            href="dashboard.html"
+            class="mt-2 inline-block rounded bg-sky-400/90 px-4 py-2 text-center text-slate-100 font-semibold"
+          >
+            Masuk Dashboard
+          </a>
+        </div>
+      </nav>
+      <main>
+        <section id="home" class="relative min-h-screen">
+          <div
+            class="absolute inset-0 bg-cover bg-no-repeat opacity-80"
+            style="
+              background-image: url(/assets/Hero-Bg.png);
+              background-position: center 30%;
+            "
+          ></div>
+          <div
+            class="absolute inset-0 bg-linear-to-b from-black/60 via-black/40 to-black/80 bg-blend-multiply"
+          ></div>
+
+          <div
+            class="container relative z-10 flex h-full items-center justify-center"
+          >
+            <div class="flex flex-wrap justify-center mt-50">
+              <div
+                class="flex gap-2 items-center bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-3 py-2 shadow-sm w-fit h-fit mb-4 text-white text-sm font-sans"
+              >
+                <i data-feather="star" class="w-5 h-5 relative bottom-1/2"></i>
+                <span>Platform Pendidikan Islami Digital</span>
+              </div>
+              <div class="w-full self-center text-center px-4 mx-2">
+                <h1 class="font-display font-bold text-white text-4xl mb-4">
+                  Transformasi Digital
+                  <span
+                    class="bg-linear-180 from-blue-600 to-aquamarine bg-clip-text text-transparent"
+                    >Peradaban Qur'ani</span
+                  >
+                </h1>
+                <p class="text-slate-100 font-sans mb-10 flex flex-col px-6">
+                  Platform pendidikan dan dakwah Islam berbasisnilai Al-Qur'an
+                </p>
+              </div>
+              <div class="flex flex-col gap-2 justify-center">
+                <button
+                  onclick="window.location.href = 'dashboard.html'"
+                  class="font-sans flex items-center gap-2 bg-cataline text-white font-semibold px-6 py-3 rounded-xl hover:bg-blue-500 transition-colors"
+                >
+                  Masuk Dashboard
+                  <span
+                    ><i
+                      data-feather="arrow-right"
+                      class="mt-0.5 w-4.5 h-4.5"
+                    ></i
+                  ></span>
+                </button>
+                <a
+                  href="#fitur"
+                  class="font-sans block mt-4 text-center text-slate-200 hover:text-slate-400 hover:underline"
+                  >Lihat Fitur</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="fitur" class="bg-slate-200 min-h-screen">
+          <div class="container py-16">
+            <div class="text-center mt-4 mb-12">
+              <h2 class="font-sans text-slate-400 text-sm mb-4">
+                Fitur Unggulan
+              </h2>
+              <h1
+                class="flex flex-col font-display text-3xl font-bold text-slate-800"
+              >
+                Ekosistem Lengkap untuk<span class="text-cataline"
+                  >Generasi Qur'ani</span
+                >
+              </h1>
+              <p class="p-4 font-sans text-sm text-slate-400">
+                Empat pilar utama yang mengintegrasikan pendidikan, dakwah dan
+                ibadah dalam satu platform digital
+              </p>
+            </div>
+
+            <!-- Fitur Cards -->
+            <div class="grid-cols-1">
+              <div
+                class="group bg-white shadow-lg border border-solid border-slate-200 rounded-xl p-6 mb-6 mx-6 hover:bg-slate-200 transition-colors duration-500 ease-in-out"
+              >
+                <i
+                  data-feather="book-open"
+                  class="w-4 h-4 text-cataline mb-2 relative left-1 bottom-1 group-hover:scale-125 transition-transform duration-300"
+                ></i>
+                <h3 class="font-sans font-medium text-cataline mb-2">
+                  Smart Learning Path Islami
+                </h3>
+                <p class="font-sans text-[12px] text-slate-500">
+                  Jalur pembelajaran yang disesuaikan dengan nilai-nilai
+                  Al-Qur'an dan kebutuhan pendidikan modern.
+                </p>
+              </div>
+              <div
+                class="group bg-white shadow-lg border border-solid border-slate-200 rounded-xl p-6 mb-6 mx-6 hover:bg-slate-200 transition-colors duration-500 ease-in-out"
+              >
+                <i
+                  data-feather="mic"
+                  class="w-4 h-4 text-cataline mb-2 relative left-1 bottom-1 group-hover:scale-125 transition-transform duration-300"
+                ></i>
+                <h3 class="font-sans font-medium text-cataline mb-2">
+                  Micro-Dakwah Gen Z
+                </h3>
+                <p class="font-sans text-[12px] text-slate-500">
+                  Konten dakwah singkat 1-3 menit yang relevan dengan pola
+                  konsumsi generasi digital.
+                </p>
+              </div>
+              <div
+                class="group bg-white shadow-lg border border-solid border-slate-200 rounded-xl p-6 mb-6 mx-6 hover:bg-slate-200 transition-colors duration-500 ease-in-out"
+              >
+                <i
+                  data-feather="moon"
+                  class="w-4 h-4 text-cataline mb-2 relative left-1 bottom-1 group-hover:scale-125 transition-transform duration-300"
+                ></i>
+                <h3 class="font-sans font-medium text-cataline mb-2">
+                  Ramadhan Mode
+                </h3>
+                <p class="font-sans text-[12px] text-slate-500">
+                  Mode khusus Ramadhan dengan jadwal ibadah, digital detox, dan
+                  refleksi harian.
+                </p>
+              </div>
+              <div
+                class="group bg-white shadow-lg border border-solid border-slate-200 rounded-xl p-6 mb-6 mx-6 hover:bg-slate-200 transition-colors duration-500 ease-in-out"
+              >
+                <i
+                  data-feather="bar-chart-2"
+                  class="w-4 h-4 text-cataline mb-2 relative left-1 bottom-1 group-hover:scale-125 transition-transform duration-300"
+                ></i>
+                <h3 class="font-sans font-medium text-cataline mb-2">
+                  Impact Tracker
+                </h3>
+                <p class="font-sans text-[12px] text-slate-500">
+                  Lacak progres belajar, ibadah, dan kontribusi dakwah secara
+                  terukur dan visual.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="qurani" class="relative min-h-screen bg-slate-200 py-2">
+          <div class="container mx-auto">
+            <div class="text-center mt-4 mb-12">
+              <h2 class="font-sans text-slate-400 text-sm mb-6">
+                Nilai Qur'ani
+              </h2>
+              <p
+                class="font-arabic text-slate-800 max-w-2xl text-3xl mx-auto mb-6"
+              >
+                أَلَا بِذِكْرِ ٱللَّهِ تَطْمَئِنُّ ٱلْقُلُوبُ
+              </p>
+              <p
+                class="px-8 font-sans italic font-light text-lg text-slate-600"
+              >
+                "Ketauhilah, hanya dengan mengingat Allah hati menjadi tenang."
+              </p>
+              <p class="py-2 font-sans text-sm text-slate-400">
+                QS. Ar-Ra'd [13]: 28
+              </p>
+            </div>
+            <div
+              class="flex gap-2 items-center bg-white/90 backdrop-blur-md border border-white/20 rounded-lg mx-8 p-6 shadow-xl w-fit h-fit text-sm font-sans text-slate-600"
+            >
+              Ayat ini menjadi fondasi QVERSE. Bahwa di tengah arus transformasi
+              digital yang begitu cepat, ketenangan jiwa dan pendidikan yang
+              bermakna hanya bisa dicapai melalui koneksi spiritual dengan
+              Al-Qur'an. Platform ini hadir sebagai jembatan antara teknologi
+              modern dan nilai-nilai abadi peradaban Islam.
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- Hero Section End -->
+      <footer>
+        <div class="bg-cataline text-white py-6">
+          <div class="container mx-auto text-center">
+            <p class="text-sm">&copy; 2026 Qverse. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+
+      <script>
+        feather.replace();
+      </script>
+      <script>
+        const navbar = document.getElementById("NavBar");
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 50) {
+            navbar.classList.remove("bg-transparent");
+            navbar.classList.add(
+              "bg-cataline/90",
+              "backdrop-blur",
+              "shadow-lg",
+            );
+          } else {
+            navbar.classList.add("bg-transparent");
+            navbar.classList.remove(
+              "bg-cataline/90",
+              "backdrop-blur",
+              "shadow-lg",
+            );
+          }
+        });
+      </script>
+    </div>
+  </body>
+</html>
