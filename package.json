@@ -1,4 +1,23 @@
 {
+  "name": "qverse",
+  "version": "1.0.0",
+  "description": "Qverse - Digital Islamic Education Platform for Gen Z",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i src/input.css -o src/output.css --watch",
+    "build": "npx @tailwindcss/cli -i src/input.css -o src/output.css",
+    "build:prod": "npx @tailwindcss/cli -i src/input.css -o src/output.css --minify",
+    "preview": "python3 -m http.server 8000 || python -m http.server 8000"
+  },
+  "keywords": [
+    "islamic-education",
+    "quran",
+    "digital-platform",
+    "gen-z",
+    "worship-tracker"
+  ],
+  "author": "",
+  "license": "MIT",
   "dependencies": {
     "@tailwindcss/cli": "^4.1.18",
     "tailwindcss": "^4.1.18"
